@@ -1,0 +1,24 @@
+<body  style="text-align: center; background-color: black;" >
+    
+<div style=" color: rgb(220, 50, 16); background-color: rgba(255, 255, 255, 0.39);"><h1 class="text-center container-fluid"></h1></div><br><br>
+   
+        <form [formGroup]="searchform">
+                <label class="mb-4 fs-1" style=" color: rgb(254, 254, 254);">Enter the Movie Name</label>
+                <input formControlName="title" type="text" class="form-control mb-4" name="hlo" id="mName"   >
+        </form>
+        <button type="button" class="btn btn-outline-warning"  (click)="movizz()">search</button>
+    
+        <div *ngIf="result" class="container text-center w-70 " style="border-radius: 30px; color: aliceblue;">
+                <h1>Result</h1>
+                <div>
+                    <img src="{{Poster}}" alt="">
+                </div>
+                <div class="p-5">
+                   <h1 style="color: aliceblue;">Title:{{Title}}</h1>
+                   <h1 style="color: aliceblue;">Released date:{{Released}}</h1>
+                   <h1 style="color: aliceblue;">Cast:{{Actors}}</h1>
+                   <h1 style="color: aliceblue;">Plot:{{Plot}}</h1>
+                   <h1 style="color: aliceblue;">Ratings:{{Ratings[0].Value}}</h1>
+                </div>
+            </div>
+</body>
